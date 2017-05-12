@@ -1,5 +1,6 @@
-[v0.0.2](https://github.com/littleflute/blMp4Player/edit/master/README.md)
+[v0.0.3](https://github.com/littleflute/blMp4Player/edit/master/README.md)
 
+[show this page](https://littleflute.github.io/blMp4Player/)
 
 <div id="blID_Mp4Player" style="border:1px blue solid;width:5px;height:550px;"></div> 
  
@@ -18,7 +19,7 @@ function blMp4Player() {
  		ui.appendChild(d);
 		var s = "";
 		s += "<video id='bl_Video' width='320px' height='240px' controls>";
-		s += "<source src='en_7_8_ex.mp4' type='video/mp4'>";
+		s += "<source src='2.mp4' type='video/mp4'>";
 		s += "Your browser does not support HTML5 video.";
 		s += "</video>"; 
 
