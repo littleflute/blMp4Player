@@ -1,37 +1,129 @@
-## Welcome to GitHub Pages
+<div id="blID_Mp4Player" style="border:1px blue solid;width:50px;height:50px;"></div> 
+ 
+<script>
+//<
+function blMp4Player() { 
+	this.ui				= null;
+	this.v				= null;
+	this.vSrc			= "";
 
-You can use the [editor on GitHub](https://github.com/littleflute/blMp4Player/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+	this.createVideo	= function ()
+	{
+		var d = document.createElement("div");
+		d.style.border = "1px blue solid";
+		var ui = this.getUI();
+ 		ui.appendChild(d);
+		var s = "";
+		s += "<video id='bl_Video' width='320px' height='240px' controls>";
+		s += "<source src='en_7_8_ex.mp4' type='video/mp4'>";
+		s += "Your browser does not support HTML5 video.";
+		s += "</video>"; 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+		d.innerHTML = s;
 
-### Markdown
+	};
+	this.getUI		= function ()
+	{
+		if(this.ui == null)
+		{
+			var el				= document.createElement("div");
+			el.style.position	= "absolute";
+			el.style.border		= "1px green solid";
+			el.style.width		= "330px";
+			el.style.left		= "300px";
+			this.ui			= el;
+		}
+		return this.ui;
+	};
+	this.showMe		= function ()
+	{  
+		var o = document.getElementById("blID_Mp4Player"); 
+		var me = this.getUI();
+		me.innerHTML = "mp4: v0.1.8"; 
+		o.appendChild(me);
+		this.createVideo();
+	};
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+	this.play		= function ()
+	{
+		if(this.v == null) this.createVideo();
+		this.v.play();
+	};
+}   
+//-->
+var p = new blMp4Player();
+p.showMe();
 
-```markdown
-Syntax highlighted code block
+//-->
 
-# Header 1
-## Header 2
-### Header 3
+</script> 
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+~~~html
+<!DOCTYPE html>	  
+<html>  
+<body>  
+<div id="blID_Mp4Player" style="border:1px blue solid;width:50px;height:50px;"></div> 
+ 
+<script>
+//<
+function blMp4Player() { 
+	this.ui				= null;
+	this.v				= null;
+	this.vSrc			= "";
 
-### Jekyll Themes
+	this.createVideo	= function ()
+	{
+		var d = document.createElement("div");
+		d.style.border = "1px blue solid";
+		var ui = this.getUI();
+ 		ui.appendChild(d);
+		var s = "";
+		s += "<video id='bl_Video' width='320px' height='240px' controls>";
+		s += "<source src='en_7_8_ex.mp4' type='video/mp4'>";
+		s += "Your browser does not support HTML5 video.";
+		s += "</video>"; 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/littleflute/blMp4Player/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+		d.innerHTML = s;
 
-### Support or Contact
+	};
+	this.getUI		= function ()
+	{
+		if(this.ui == null)
+		{
+			var el				= document.createElement("div");
+			el.style.position	= "absolute";
+			el.style.border		= "1px green solid";
+			el.style.width		= "330px";
+			el.style.left		= "300px";
+			this.ui			= el;
+		}
+		return this.ui;
+	};
+	this.showMe		= function ()
+	{  
+		var o = document.getElementById("blID_Mp4Player"); 
+		var me = this.getUI();
+		me.innerHTML = "mp4: v0.1.8"; 
+		o.appendChild(me);
+		this.createVideo();
+	};
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+	this.play		= function ()
+	{
+		if(this.v == null) this.createVideo();
+		this.v.play();
+	};
+}   
+//-->
+var p = new blMp4Player();
+p.showMe();
+
+//-->
+
+</script> 
+</body> 
+~~~
