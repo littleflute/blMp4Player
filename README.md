@@ -1,4 +1,7 @@
-<div id="blID_Mp4Player" style="border:1px blue solid;width:50px;height:50px;"></div> 
+[v0.0.2](https://github.com/littleflute/blMp4Player/edit/master/README.md)
+
+
+<div id="blID_Mp4Player" style="border:1px blue solid;width:5px;height:550px;"></div> 
  
 <script>
 //<
