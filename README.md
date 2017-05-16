@@ -1,3 +1,4 @@
+ <a href="https://github.com/littleflute/blMp4Player/edit/master/README.md">v0.0.2</a>
  
 <div id="blID_Mp4Player" style="border:1px blue solid;width:50px;height:50px;"></div> 
 
