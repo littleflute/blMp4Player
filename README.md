@@ -3,7 +3,7 @@
 
 <button onclick="p.showMyCode2Div(this,'code');">+</button>
 
-<div id="code" style="position:absolute;top:80px;left:10px;width:220px;border:1px blue solid;"></div>
+<div id="code" style="top:80px;left:10px;width:220px;border:1px blue solid;"></div>
 <script>
 //<
 function blMp4Player() { 
