@@ -1,6 +1,6 @@
- <a href="https://github.com/littleflute/blMp4Player/edit/master/README.md">v0.0.3</a>
+ <a href="https://github.com/littleflute/blMp4Player/edit/master/README.md">v0.0.4</a>
  
-<div id="blID_Mp4Player" style="border:1px red solid;width:50px;height:150px;"></div> 
+<div id="blID_Mp4Player" style="border:1px red solid;width:50px;height:550px;"></div> 
 
 <button onclick="p.showMyCode2Div(this,'code');">+</button>
 
