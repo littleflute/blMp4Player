@@ -10,10 +10,10 @@
 //<
 function blMp4Player() { 
 	this.ui				= null;
-	this.v				= "v0.2.1";
+	this.v				= "v0.2.3";
 	this.src			= "https://littleflute.github.io/Stevie-Ray-Vaughan/STEVIE_RAY_VAUGHAN/STEVIE_RAY_VAUGHAN 00_04_18-00_09_52.mp4";
     this.onBtnTest		= function(o)
-    {
+    { 
     	var id = "x" + o.parentElement.id;
       	var x = document.getElementById(id);
     	if(x.style.display == "none")
@@ -29,6 +29,18 @@ function blMp4Player() {
         	o.style.color = "green";
     	}
     };
+    this.onRunTest		= function(o)
+    { 
+    	if("play"==o.innerHTML)
+        { 
+           p.play();
+        }
+    	if("stop"==o.innerHTML)
+        { 
+           p.stop();
+        }
+        
+    };
     this.bShowCode		= false; 
     this.showMyCode2Div		= function (btn,divId)
     {
@@ -38,7 +50,11 @@ function blMp4Player() {
 
 		this.bShowCode = !this.bShowCode;
 		btn.innerHTML = this.bShowCode?"-":"+";
-		if(!this.bShowCode) {h.innerHTML = ""; return;}
+		if(!this.bShowCode) 
+        {
+        	h.innerHTML = ""; 
+            return;
+        }
 
         var nID = 0;
 		for(x in this)
@@ -48,10 +64,15 @@ function blMp4Player() {
 			var d = document.createElement("div");
 			d.id = nID;
             d.onFun = this.onBtnTest;
+            d.onRun = this.onRunTest;
             d.innerHTML = x;
-            var bt= "<button onclick='this.parentElement.onFun(this)'>";
-            bt += "+</button>";
-			d.innerHTML += bt;
+            var b1= "<button onclick='this.parentElement.onFun(this)'>";
+            b1 += "+</button>";
+			d.innerHTML += b1;
+            var b2= "<button onclick='this.parentElement.onRun(this)'>";
+            b2 += x;
+            b2 += "</button>";
+			d.innerHTML += b2;
             d.style.border = "solid 1px blue";
 			d.style.color = "red";
 			h.appendChild(d); 
@@ -106,15 +127,15 @@ function blMp4Player() {
 	};
 
 	this.play		= function ()
-	{
-		if(this.v == null) this.createVideo();
-		this.v.play();
+	{  
+        var vv = document.getElementById("bl_Video");
+        if(vv) vv.play();
 	};
 
 	this.stop		= function ()
-	{
-		if(this.v == null) this.createVideo();
-		this.v.stop();
+	{ 
+        var vv = document.getElementById("bl_Video");
+        if(vv) vv.stop();
 	};
 }   
 //-->
